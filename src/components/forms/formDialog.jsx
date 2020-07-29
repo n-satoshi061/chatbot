@@ -23,11 +23,32 @@ const FormDialog = (props) => {
     setDescription(event.target.value)
   }, [setDescription]);
 
-  const submitForm = () => {
-    const name = name
-    const email = email
-    const description = description
+  const validateEmailFormat = (email) => {
+    const regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    return regex.test(email)
+  }
 
+  const validateRequiredInput = (...args) => {
+      let isBlank = false;
+      for (let i = 0; i < args.length; i=(i+1)|0) {
+          if (args[i] === "") {
+              isBlank = true;
+          }
+      }
+      return isBlank
+  };
+
+  const submitForm = () => {
+    const isBlank = validateRequiredInput(name, email, description)
+    const isValidEmail = validateEmailFormat(email)
+
+    if (isBlank) {
+      alert('必須入力欄が空白です。')
+      return false
+  } else if (!isValidEmail) {
+      alert('メールアドレスの書式が異なります。')
+      return false
+  } else {
     const payload = {
       text: "お問い合わせがありました\n" +
             "お名前: " + name + "\n" +
@@ -46,7 +67,8 @@ const FormDialog = (props) => {
       setDescription("")
       return props.handleClose()
     })
-  };
+  }
+};
     return(
       <Dialog
         open={props.open}
