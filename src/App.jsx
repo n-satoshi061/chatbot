@@ -25,7 +25,7 @@ const App = () => {
       case (nextQuestionId === 'contact'):
         handleClickOpen()
         break;
-      case /^https:*/.test(nextQuestionId):
+      case /^http:*/.test(nextQuestionId):
         const a= document.createElement('a');
         a.href = nextQuestionId;
         a.target = '_blank';
