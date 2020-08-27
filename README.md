@@ -1,54 +1,43 @@
+# Yasa!!!ショッピング
+![イメージ画像](src/assets/img/イメージ画像.png)
+
+## 概要
+回答選択型のチャットボットアプリを作成しました。  
+画面上部の質問に対して、画面下部の回答を選択していただくと、回答に応じた答えが表示されます。
+
+### URL
+<https://ec-app-f17ae.web.app/>
+
+
+## 使用技術
+### フロントエンド
+・HTML  
+・CSS  
+・JavaScript  
+・React  
+・React Hooks  
+・Material-UI  
+
+### インフラ・サーバーサイド・データベース
+・Firebase  
+・Cloud Functions  
+・Firestore  
+
+### 開発環境
+・npm  
+・create-react-app  
+
+## 制作背景
+チャットボットを通じて私の経歴、SNS、個人アプリ等をご覧いただくために作成しました。
+Reactの学習の一貫として、簡易的なポートフォリオとしての役割を果たすことを目標として作成しました。
+
+## 工夫した点
+SlackのIncoming Webhookを使い、問い合わせモーダルを作成しました。
+個人アプリを見ていただいて、私にご興味を持ってくださった方が連絡を取れるようにと思って作成しました。
+
+![モーダル画像](src/assets/img/modal.png)
+
+
+
 # License
 The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
-
-## Name
-[Chatbot｜とらゼミ](https://chatbot-demo-1bc98.web.app/)
-
-## 01. Overview
-This is DEMO app for "日本一わかりやすいReact入門【実践編】" produced by とらゼミ  
-This app is developed as teaching materials for React.  
-[YouTube Link](https://www.youtube.com/playlist?list=PLX8Rsrpnn3IVOk48awq_nKW0aFP0MGpnn)
-
-## 02. Installation
-### create-react-app
-`npx create-react-app YOUR_PROJECT_NAME`
-
-### `npm start`
-
-### Material-UI
-`npm install --save @material-ui/core @material-ui/icons @material-ui/system`
-
-### Modifying index.html
-1. Delete unnecessary comment rows
-2. Modify title and description for your site
-3. Add stylesheet for Material-UI  
-`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />`  
-`<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />`
-
-## 03. Create Firebase project
-
-### Install firebase-tools globally 
-`npm install -g firebase-tools`
-
-### Login your google account (which created a Firebase project)
-`firebase login`
-
-### Init local environment to connect Firebase project
-`firebase init`
-
-### Install firebase package in your work directory
-`npm install --save firebase`
-
-### Deploy your React App to the site hosted by Firebase
-`firebase deploy` 
-
-## 10. Firebase
-### Create Cloud Functions API
-Import these packages and initialize Firebase app
-`import * as functions from 'firebase-functions';
- import * as admin from "firebase-admin";
- admin.initializeApp();
- const db = admin.firestore();` 
-
-### Execute Cloud Functions API
-`curl -X POST https://YOUR_REGION-YOUR_PROJECT_NAME.cloudfunctions.net/addDataset -H "Content-Type:application/json" -d @dataset.json`
