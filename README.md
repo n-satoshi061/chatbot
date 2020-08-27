@@ -6,7 +6,7 @@
 画面上部の質問に対して、画面下部の回答を選択していただくと、回答に応じた答えが表示されます。
 
 ### URL
-<https://ec-app-f17ae.web.app/>
+<https://chatbot-demo-53ea1.web.app/>
 
 
 ## 使用技術
