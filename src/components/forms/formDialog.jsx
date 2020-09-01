@@ -5,6 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextInput from './textInput'
+import {WEBHOOK_URL} from '../../slack_config'
 
 
 const FormDialog = (props) => {
@@ -56,8 +57,7 @@ const FormDialog = (props) => {
             "お問い合わせ内容：\n" + description
     }
 
-    const url = "https://hooks.slack.com/services/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"
-    fetch(url, {
+    fetch(WEBHOOK_URL, {
       method: 'POST',
       body: JSON.stringify(payload)
     }).then(() => {
