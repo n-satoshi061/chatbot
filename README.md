@@ -42,6 +42,5 @@ SlackのIncoming Webhookを使い、問い合わせモーダルを作成しま�
 ![モーダル画像](src/assets/img/modal.png)
 
 
-
 # License
 The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
